@@ -1,0 +1,1667 @@
+`<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<TITLE>Products example template</TITLE>
+</head>
+
+<body>
+
+
+
+
+
+
+<br>
+<br>
+<br>
+<H1>PRODUCT TEMPLATES</H1>
+<h2>EXAMPLE</h2>
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>ITEM_LIST_TEMPLATE</h3>
+<em>This subpart is used to display the regular list of products. It's also used by search-results.</em><br>
+<br>
+<br>
+
+
+<!-- ###ITEM_LIST_TEMPLATE### begin
+	This subpart is used to display the regular list of products. It's also used by search-results.
+-->
+<TABLE class="products-item-list">
+	<tr>
+		<td><!--###LINK_PREV###--><div class="products-item-list-prev-page"><b>Prevoius page</b></div><!--###LINK_PREV###--></td>
+		<td></td>
+		<td><!--###LINK_NEXT###--><div class="products-item-list-next-page"><b>Next page</b></div><!--###LINK_NEXT###--></td>
+	</tr>
+	<!-- ###ITEM_CATEGORY_AND_ITEMS### begin -->
+		<!-- ###ITEM_CATEGORY### begin -->		
+			<tr>
+				<td colspan=3><h4>###CATEGORY_TITLE###</h4>				
+				</td>
+			</tr>
+			<tr>
+					<TD class="products-item-img" valign=top >###CATEGORY_IMAGE###</TD>
+					<TD class="products-item-txt" valign=top colspan=2>###CATEGORY_NOTE###</TD>
+			</tr>						
+		<!-- ###ITEM_CATEGORY### end -->
+		<!-- ###ITEM_LIST### begin -->
+			<!-- ###ITEM_SINGLE### begin-->
+			<FORM method="post" action="###FORM_URL###" name="###FORM_NAME###">
+				<tr>    
+		                                                <td colspan=3><img src="clear.gif" width=100% height=6></td>
+				</tr>
+				<tr>
+					<td class="products-item-hdr" colspan=3><!--###LINK_ITEM###--><b>###PRODUCT_TITLE###</b><!--###LINK_ITEM###--></td>
+				</tr>
+				<tr>    
+		                                                <td colspan=3><img src="clear.gif" width=100% height=6></td>
+				</tr>
+
+				<TR>
+					<TD class="products-item-img" valign=top rowspan=2>###PRODUCT_IMAGE###</TD>
+					<TD class="products-item-txt" valign=top colspan=2>###PRODUCT_NOTE###</TD>
+				</TR>
+                                                                <TR>
+                                                                                 <TD class="products-item-price">
+						<B>Price inc. VAT:</b> <strong>###PRICE_TAX### z³</strong><br>
+						(Price ex. VAT: ###PRICE_NO_TAX### z³)
+					</TD>
+					<TD valign=top nowrap align=right> Qty: <INPUT size="3" maxlength="4" type="text" name="###FIELD_NAME###" value="###FIELD_QTY###"><BR><input type="Submit" name="order" value="Put in basket" onClick="if (!document.forms['###FORM_NAME###']['###FIELD_NAME###'].value!=''){document.forms['###FORM_NAME###']['###FIELD_NAME###'].value=1;};">
+					</TD>
+                                                                </TR>
+			</FORM>
+			<!-- ###ITEM_SINGLE### end -->
+		<!-- ###ITEM_LIST### end -->
+	<!-- ###ITEM_CATEGORY_AND_ITEMS### end -->
+	<tr>
+		<td><!--###LINK_PREV###--><div class="products-item-list-prev-page"><b>Prevoius page</b></div><!--###LINK_PREV###--></td>
+		<td></td>
+		<td><!--###LINK_NEXT###--><div class="products-item-list-next-page"><b>Next page</b></div><!--###LINK_NEXT###--></td>
+	</tr>
+</TABLE>
+<BR><BR>
+<!-- ###ITEM_LIST_TEMPLATE### end -->
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>ITEM_SINGLE_DISPLAY</h3>
+<em>This subpart is used to display single products.</em><br>
+<br>
+<br>
+
+<!-- ###ITEM_SINGLE_DISPLAY### begin
+	This subpart is used to display single products.
+-->
+<TABLE class="products-item-single">
+<FORM method="post" action="###FORM_URL###">
+	<tr>
+                      <td colspan=2><img src="clear.gif" width=100% height=6></td>
+	</tr>
+	<tr>
+	      <td class="products-item-hdr" colspan=3><!--###LINK_ITEM###--><b>###PRODUCT_TITLE###</b><!--###LINK_ITEM###--></td>
+	</tr>
+	<tr>    
+	      <td colspan=2><img src="clear.gif" width=100% height=6></td>
+	</tr>
+	<TR>
+		<TD class="products-item-img" >###PRODUCT_IMAGE###</TD>
+		<TD class="products-item-txt" >
+				<B>Category:</B> ###CATEGORY_TITLE### <br><br>
+				<B>Itemnumber:</B> ###PRODUCT_ITEMNUMBER###<br><br>
+                                                                <div class="products-item-price">
+				<B>Price inc. VAT: </B><strong> ###PRICE_TAX### z³</strong><br>
+                                                                 (Price ex. VAT: ###PRICE_NO_TAX### z³)<br><br>
+                                                                </div>				
+				<B>Info:</B><br>
+				###PRODUCT_NOTE###<br>
+			                <br>
+				<nobr>Quantity:<INPUT size="3" maxlength="4" type="text" name="###FIELD_NAME###" value="###FIELD_QTY###"> &nbsp; <input type="Submit" name="order" value="Put in basket" onClick="if (!document.forms[0]['###FIELD_NAME###'].value!=''){document.forms[0]['###FIELD_NAME###'].value=1;};"></nobr>
+		</TD>
+	</TR>
+</form>
+</TABLE>
+<br>
+<br>
+
+	
+<!--###LINK_ITEM###-->
+<b><- Back to the list</b>
+<!--###LINK_ITEM###-->
+						
+	
+<!-- ###ITEM_SINGLE_DISPLAY### end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>ITEM_SEARCH</h3>
+<em>Subpart for the search-form.</em><br>
+<br>
+<br>
+
+<!-- ###ITEM_SEARCH### begin
+	Subpart for the search-form
+-->
+<FORM method="post" action="###FORM_URL###">
+	<INPUT size="30" maxlength="100" type="text" name="swords" value="###SWORDS###">
+	<input type="Submit" name="order" value="Search">
+</form>
+<!-- ###ITEM_SEARCH### end -->
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>ITEM_SEARCH_EMPTY</h3>
+<em>Subpart displayed if the search was empty. If the search was successfull, the ITEM_LIST_TEMPLATE in the top is used.</em><br>
+<br>
+<br>
+
+<!-- ###ITEM_SEARCH_EMPTY### begin
+	Subpart displayed if the search was empty. If the search was successfull, the ITEM_LIST_TEMPLATE in the top is used.
+-->
+<B class="products-item-search-empty">The search was empty.</B>
+<!-- ###ITEM_SEARCH_EMPTY### end -->
+
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>BASKET_TEMPLATE</h3>
+<em>
+Subpart used to display the content of the shopping basket.<br>
+The product list part has the exact same features as the regular LIST_ITEM_TEMPLATE subpart.<br>
+In addition there's a number of fields used for delivery and payment information.<br>
+</em><br>
+<br>
+<br>
+
+<!-- ###BASKET_TEMPLATE### 
+	Subpart used to display the content of the shopping basket.
+	The product list part has the exact same features as the regular LIST_ITEM_TEMPLATE subpart.
+	In addition there's a number of fields used for delivery and payment information.
+-->
+###EXTERNAL_COBJECT###
+<TABLE class="products-basket" >
+<FORM method="post" action="###FORM_URL###">
+	<tr>
+		<td><img src="clear.gif" width=300 height=5></td>
+		<td colspan=3><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td class="products-basket-hdr"><b>Product:</b></td>
+		<td class="products-basket-hdr"><b>Price:</b></td>
+		<td class="products-basket-hdr"><b>Quantity:</b></td>
+		<td class="products-basket-hdr" align=center><b>Total:</b></td>
+	</tr>
+	<!-- ###ITEM_CATEGORY_AND_ITEMS### begin -->
+		<!-- ###ITEM_CATEGORY### begin -->		
+			<tr>
+				<td class="products-basket-category" colspan=4><br>###CATEGORY_TITLE###<br>
+				</td>
+			</tr>
+		<!-- ###ITEM_CATEGORY### end -->
+		<!-- ###ITEM_LIST### begin -->
+			<!-- ###ITEM_SINGLE### begin-->
+				<tr>
+					<td colspan=4><img src="clear.gif" width=100% height=5></td>
+				</tr>
+				<TR>
+					<TD class="products-basket-item" valign=top>
+					   <!--###LINK_ITEM###--><b>###PRODUCT_TITLE###</b><!--###LINK_ITEM###-->	
+					</TD>
+					<td class="products-basket-item" valign=top align=right>###PRICE_TAX###</td>
+					<TD class="products-basket-item" valign=top>&nbsp;<INPUT size="3" maxlength="4" type="text" name="###FIELD_NAME###" value="###FIELD_QTY###">&nbsp;</TD>
+					<td class="products-basket-item" valign=top align=right><b>###PRICE_TOTAL_TAX###</b></td>
+				</TR>
+			<!-- ###ITEM_SINGLE### end -->
+		<!-- ###ITEM_LIST### end -->
+	<!-- ###ITEM_CATEGORY_AND_ITEMS###  end -->
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-basket-hdr" colspan=4><b>Delivery:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<TR>
+		<td colspan=3>
+		  Shipping: <b>###SHIPPING_TITLE###</B><br><br>
+							
+		###SHIPPING_SELECTOR###
+
+		###SHIPPING_IMAGE###
+		</td>
+		<td valign=top align=right><b>###PRICE_SHIPPING_TAX###</b> <BR>(###PRICE_SHIPPING_NO_TAX###) </td>
+	</TR>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=10></td>
+	</tr>
+	<tr>
+		<td class="products-basket-hdr" colspan=4><b>Form of payment:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<TR>
+		<td colspan=3>		
+		###PAYMENT_SELECTOR###
+		<!-- ###MESSAGE_PAYMENT### begin
+			This whole subpart, message_payment is substituted with the subpart 'message_payment_[number-of-method-in-typoscript]'
+		-->
+			<!-- ###MESSAGE_PAYMENT_10### begin -->
+			<BR><B></b><br>
+			<!-- ###MESSAGE_PAYMENT_10### end -->
+		<!-- ###MESSAGE_PAYMENT### end -->
+		
+		</td>
+		<td valign=top align=right><b>###PRICE_PAYMENT_TAX###</b> <BR>(###PRICE_PAYMENT_NO_TAX###) </td>
+	</TR>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=10></td>
+	</tr>
+	<tr>
+		<td class="products-basket-hdr" colspan=4><b>Total:</b></td>
+	</tr>
+	<TR>
+		<td valign=top colspan=3></td>
+		<td valign=top align=right nowrap><b>Inc. VAT z³ ###PRICE_TOTAL_TAX###</b><br>
+		(Ex. VAT z³ ###PRICE_TOTAL_NO_TAX###)</td>
+	</TR>
+                <TR>
+                                <td colspan=4>
+                                    <input type="Submit" name="products_update" value="Update basket">&nbsp;&nbsp;	
+                                    <input type="Submit" name="products_info" value="Go to payment/ordering" onClick="document.forms[0].action='###FORM_URL_INFO###';">
+                                </td>    
+                </TR>
+</FORM>
+</TABLE>
+
+
+<BR>
+<!-- ###BASKET_TEMPLATE### end -->
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>BASKET_INFO_TEMPLATE</h3>
+<em>
+Subpart used if the GPvar "products_info" was set. This is normally used to let people enter address information separately from the real basket.<BR>
+Exact same features as BASKET_TEMPLATE<BR>
+</em><br>
+<br>
+<br>
+<!-- ###BASKET_INFO_TEMPLATE### begin
+	Subpart used if the GPvar "products_info" was set. This is normally used to let people enter address information separately from the real basket
+	Exact same features as BASKET_TEMPLATE
+-->
+<TABLE class="products-basket-info">
+<FORM method="post" action="###FORM_URL###">
+	<tr>
+		<td><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td class="products-basket-info-hdr"><b>Billing	address:</b></td>
+	</tr>
+	<tr>
+		<td><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td class="products-basket-info-txt">
+		<!-- ###BILLING_ADDRESS### start -->
+                                          <p>
+			Enter your postal address here. If you want to get commercial invoice, fill VAT-id field.<br>
+			Normally we will send the goods to this address, but if you enter an alternative address in the fields below, we'll send your goods there instead.<br>
+			If you chose "Pickup" as delivery form, your goods are not shipped to you of course. 
+                                          </p>
+			<br>
+			<br>
+			<table>
+			<tr>
+				<td><strong>Forename: </strong>*</td>
+				<td><input type="text" name="recs[personinfo][forename]" size="30" value="###PERSON_FORENAME###"></td>
+			</tr>
+			<tr>
+				<td><strong>Surname: </strong>*</td>
+				<td><input type="text" name="recs[personinfo][name]" size="30" value="###PERSON_NAME###"></td>
+			</tr>			
+			<tr>
+				<td><strong>Company: </strong></td>
+				<td><input type="text" name="recs[personinfo][company]" size="30" value="###PERSON_COMPANY###"></td>
+			</tr>			
+			<tr>
+				<td><strong>VAT id: </strong></td>
+				<td><input type="text" name="recs[personinfo][vat_id]" size="20" value="###PERSON_VAT_ID###"></td>
+			</tr>
+			<tr>
+				<td><strong>Street: </strong>*</td>
+				<td><input type="text" name="recs[personinfo][street]" size="30" value="###PERSON_STREET###"></td>
+			</tr>
+			<tr>
+				<td><strong>House/local no: </strong>*</td>
+				<td><input type="text" name="recs[personinfo][street_n1]" size="10" value="###PERSON_STREET_N1###">
+                                                                       /
+                                                                       <input type="text" name="recs[personinfo][street_n2]" size="10" value="###PERSON_STREET_N2###">
+                                                                </td>
+			</tr>
+			<tr>
+				<td><strong>Postal code: </strong>*</td>
+				<td><input type="text" name="recs[personinfo][zip]" size="10" value="###PERSON_ZIP###"></td>
+			</tr>
+			<tr>
+				<td><strong>City: </strong>*</td>
+				<td><input type="text" name="recs[personinfo][city]" size="30" value="###PERSON_CITY###"></td>
+			</tr>
+			<tr>
+				<td><strong>Country: </strong>*</td>
+				<td class="products-basket-info-country">
+                                                                      ###PERSON_COUNTRY_CODE###
+                                                                </td>
+			</tr>
+			<tr>
+				<td><strong>Phone: </strong>*</td>
+				<td><input type="text" name="recs[personinfo][telephone]" size="30" value="###PERSON_TELEPHONE###"></td>
+			</tr>
+
+			<tr>
+				<td><strong>Email: </strong>*</td>
+				<td><input type="text" name="recs[personinfo][email]" size="30" value="###PERSON_EMAIL###"></td>
+			</tr>
+			</table>			
+	
+            <br>
+			
+			<em>Notice: Fields with * must be filled in!</em>
+		<!-- ###BILLING_ADDRESS### end-->
+
+		
+		<!-- ###BILLING_ADDRESS_LOGIN### start
+			If this part is not empty then this will be used instead of BILLING_ADDRESS if there is a FE-login user.
+		 -->
+			<br>
+			<table>
+			<tr>
+				<td><strong>Name/Company::</strong></td>
+				<td>###PERSON_NAME###</td>
+			</tr>
+			<tr>
+				<td><strong>Postal address:</strong></td>
+				<td>###PERSON_ADDRESS_DISPLAY###</td>
+			</tr>
+			<tr>
+				<td><strong>Phone:</strong></td>
+				<td>###PERSON_TELEPHONE###</td>
+			</tr>
+			<tr>
+				<td><strong>Email:</strong></td>
+				<td>###PERSON_EMAIL###</td>
+			</tr>
+			</table> 		<!-- ###BILLING_ADDRESS_LOGIN### end-->
+		</td>
+	</tr>
+	<tr>
+		<td><img src="clear.gif" width=100% height=10></td>
+	</tr>
+	<tr>
+		<td class="products-basket-info-hdr"><b>Delivery address:</b></td>
+	</tr>
+	<tr>
+		<td><img src="clear.gif" width=100% height=10></td>
+	</tr>
+	<tr>
+		<td>
+			If you wish your goods to be delivered to another address than the invoice address above, enter the full address here. You can also enter the contact person/email at this location.
+			<br>
+			<br>
+
+			<table>
+			<tr>
+				<td><strong>Forename: </strong></td>
+				<td><input type="text" name="recs[delivery][forename]" size="30" value="###DELIVERY_FORENAME###"></td>
+			</tr>
+			<tr>
+				<td><strong>Surname: </strong></td>
+				<td><input type="text" name="recs[delivery][name]" size="30" value="###DELIVERY_NAME###"></td>
+			</tr>
+			<tr>
+				<td><strong>Company: </strong></td>
+				<td><input type="text" name="recs[delivery][company]" size="30" value="###DELIVERY_COMPANY###"></td>
+			</tr>						
+			<tr>
+				<td><strong>Street: </strong></td>
+				<td><input type="text" name="recs[delivery][street]" size="30" value="###DELIVERY_STREET###"></td>
+			</tr>
+			<tr>
+				<td><strong>House/local no: </strong></td>
+				<td><input type="text" name="recs[delivery][street_n1]" size="10" value="###DELIVERY_STREET_N1###">
+                                                                       /
+                                                                       <input type="text" name="recs[delivery][street_n2]" size="10" value="###DELIVERY_STREET_N2###">
+                                                                </td>
+			</tr>
+			<tr>
+				<td><strong>Postal code: </strong></td>
+				<td><input type="text" name="recs[delivery][zip]" size="10" value="###DELIVERY_ZIP###"></td>
+			</tr>
+			<tr>
+				<td><strong>City: </strong></td>
+				<td><input type="text" name="recs[delivery][city]" size="30" value="###DELIVERY_CITY###"></td>
+			</tr>
+			<tr>
+				<td><strong>Country: </strong></td>
+				<td class="products-basket-info-country">
+                                                                       ###DELIVERY_COUNTRY_CODE###
+                                                                </td>
+			</tr>
+			<tr>
+				<td><strong>Phone: </strong></td>
+				<td><input type="text" name="recs[delivery][telephone]" size="30" value="###DELIVERY_TELEPHONE###"></td>
+			</tr>
+
+			<tr>
+				<td><strong>Email: </strong></td>
+				<td><input type="text" name="recs[delivery][email]" size="30" value="###DELIVERY_EMAIL###"></td>
+			</tr>
+			</table>			
+
+		</td>
+	</tr>
+	<tr>
+		<td><img src="clear.gif" width=100% height=10></td>
+	</tr>
+	<tr>
+		<td class="products-basket-info-hdr"><b>Comments:</b></td>
+	</tr>
+	<tr>
+		<td><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td>
+				If you have any further comments to your order, please use this field:
+			<br>
+			<br>
+
+			<table>
+			<tr>
+				<td><strong>Comments:</strong></td>
+				<td><textarea cols=30 rows=5 name="recs[delivery][note]">###DELIVERY_NOTE###</textarea></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+                <tr>
+                   <td>
+                      <br>
+                       <input type="Submit" name="products_update" value="Back to basket">&nbsp;&nbsp;	<input type="Submit" name="products_payment" value="Continue payment/ordering" onClick="document.forms[0].action='###FORM_URL_FINALIZE###';">
+                       <BR>
+                   </td>
+               </tr> 
+</FORM>
+</TABLE>
+<!-- ###BASKET_INFO_TEMPLATE### end -->
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>BASKET_PAYMENT_TEMPLATE</h3>
+<em>
+Subpart used if the GPvar "products_payment" was set. This displays the final information about the order before the payment is initiated.<BR>
+Exact same features as BASKET_TEMPLATE<BR>
+</em><br>
+<br>
+<br>
+<!-- ###BASKET_PAYMENT_TEMPLATE### begin
+	Subpart used if the GPvar "products_payment" was set. This displays the final information about the order before the payment is initiated.
+	Exact same features as BASKET_TEMPLATE
+-->
+###EXTERNAL_COBJECT###
+<TABLE class="products-basket" >
+	<tr>
+		<td><img src="clear.gif" width=300 height=5></td>
+		<td colspan=3><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td class="products-basket-hdr"><b>Product:</b></td>
+		<td class="products-basket-hdr"><b>Price:</b></td>
+		<td class="products-basket-hdr"><b>Quantity:</b></td>
+		<td class="products-basket-hdr" align=center><b>Total:</b></td>
+	</tr>
+	<!-- ###ITEM_CATEGORY_AND_ITEMS### begin -->
+		<!-- ###ITEM_CATEGORY### begin -->		
+			<tr>
+				<td class="products-basket-category" colspan=4><br>###CATEGORY_TITLE###<br>
+				</td>
+			</tr>
+		<!-- ###ITEM_CATEGORY### end -->
+		<!-- ###ITEM_LIST### begin -->
+			<!-- ###ITEM_SINGLE### begin-->
+				<tr>
+					<td colspan=4><img src="clear.gif" width=100% height=5></td>
+				</tr>
+				<TR>
+					<TD class="products-basket-item" valign=top>
+					   <!--###LINK_ITEM###--><b>###PRODUCT_TITLE###</b><!--###LINK_ITEM###-->	
+					</TD>
+					<td class="products-basket-item" valign=top align=right>###PRICE_TAX###</td>
+					<TD class="products-basket-item" valign=top>&nbsp;<INPUT size="3" maxlength="4" type="text" name="###FIELD_NAME###" value="###FIELD_QTY###">&nbsp;</TD>
+					<td class="products-basket-item" valign=top align=right><b>###PRICE_TOTAL_TAX###</b></td>
+				</TR>
+			<!-- ###ITEM_SINGLE### end -->
+		<!-- ###ITEM_LIST### end -->
+	<!-- ###ITEM_CATEGORY_AND_ITEMS###  end -->	
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-basket-hdr" colspan=4><b>Billing address::</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td colspan=4>
+			<table cellspacing=3 width="100%">
+			<tr>
+				<td width="30%">Forename:</td>
+				<td><strong>###PERSON_FORENAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Surname:</td>
+				<td><strong>###PERSON_NAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Company:</td>
+				<td><strong>###PERSON_COMPANY###</strong></td>
+			</tr>						
+			<tr>
+				<td width="30%">VAT id:</td>
+				<td><strong>###PERSON_VAT_ID###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Street:</td>
+				<td><strong>###PERSON_STREET###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">House/local no:</td>
+				<td><strong>###PERSON_STREET_N1###/###PERSON_STREET_N2###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Postal code:</td>
+				<td><strong>###PERSON_ZIP###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">City:</td>
+				<td><strong>###PERSON_CITY###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Country:</td>
+				<td><strong>###PERSON_COUNTRY###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Phone:</td>
+				<td><strong>###PERSON_TELEPHONE###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Email:</td>
+				<td><strong>###PERSON_EMAIL###</strong></td>
+			</tr>
+			</table>		
+
+		</td>
+		
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-basket-hdr" colspan=4><b>Delivery address:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td colspan=4>
+		
+			<table cellspacing=3 width="100%">
+			<tr>
+				<td width="30%">Forename:</td>
+				<td><strong>###DELIVERY_FORENAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Surename:</td>
+				<td><strong>###DELIVERY_NAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Company:</td>
+				<td><strong>###DELIVERY_COMPANY###</strong></td>
+			</tr>						
+			<tr>
+				<td width="30%">Street:</td>
+				<td><strong>###DELIVERY_STREET###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">House/local no:</td>
+				<td><strong>###DELIVERY_STREET_N1###/###DELIVERY_STREET_N2###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Postal code:</td>
+				<td><strong>###DELIVERY_ZIP###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">City:</td>
+				<td><strong>###DELIVERY_CITY###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Country:</td>
+				<td><strong>###DELIVERY_COUNTRY###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Phone:</td>
+				<td><strong>###DELIVERY_TELEPHONE###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Email:</td>
+				<td><strong>###DELIVERY_EMAIL###</strong></td>
+			</tr>
+			</table>		
+		
+		</td>
+		
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-basket-hdr" colspan=4><b>Uwagi:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td colspan=4>
+			<table width="100%">
+			<tr>
+				<td width="30%">Comment:</td>
+				<td><strong>###DELIVERY_NOTE_DISPLAY###</strong></td>
+			</tr>
+			</table>
+		</td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-basket-hdr" colspan=4><b>Delivery/Payment:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+
+
+
+	<TR>
+		<td valign=top colspan=3>
+			Method of shipping:<br>
+			<strong>###SHIPPING_IMAGE### ###SHIPPING_TITLE###</strong>				
+			
+		</td>
+		
+		<td valign=top align=right>
+		<b>###PRICE_SHIPPING_TAX###</b><br>
+		(###PRICE_SHIPPING_NO_TAX###)<br>
+						
+		</td>
+	</TR>
+	<TR>
+		<td valign=top colspan=3>
+			Method of payment:<br>
+			<strong>###PAYMENT_IMAGE### ###PAYMENT_TITLE###</strong>
+		<!-- ###MESSAGE_PAYMENT### 
+			This whole subpart, message_payment is substituted with the subpart 'message_payment_[number-of-method-in-typoscript]'
+		-->
+			<!-- ###MESSAGE_PAYMENT_10### begin -->
+			<BR><br>
+			<!-- ###MESSAGE_PAYMENT_10### end -->
+			<!-- ###MESSAGE_PAYMENT_20### begin -->
+			
+			<!-- ###MESSAGE_PAYMENT_20### end -->	
+			<!-- ###MESSAGE_PAYMENT_21### begin -->
+
+			<!-- ###MESSAGE_PAYMENT_21### end -->	
+			<!-- ###MESSAGE_PAYMENT_22### begin -->
+
+			<!-- ###MESSAGE_PAYMENT_22### end -->		
+		<!-- ###MESSAGE_PAYMENT### -->
+
+		</td>
+		<td valign=top align=right>
+		<b>###PRICE_PAYMENT_TAX###</b><br>
+		(###PRICE_PAYMENT_NO_TAX###)<br>
+		</td>
+	</TR>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-basket-hdr" colspan=4><b>Suma:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<TR>
+		<td valign=top colspan=3>
+			Total amount in z³:				
+		</td>
+		
+		<td valign=top align=right colspan=3 nowrap>
+		<b>PLN ###PRICE_TOTAL_TAX###</b><br>
+		( netto: ###PRICE_TOTAL_NO_TAX###)<br>
+						
+		</td>
+	</TR>
+</TABLE>
+<br>
+<FORM method="post" action="###FORM_URL###">
+<input type="Submit" name="products_update" value="Back to basket">&nbsp;&nbsp;	<input type="Submit" name="products_finalize" value="Finalize payment/ordering" onClick="document.forms[0].action='###FORM_URL_THANKS###'; document.forms[0].target='###FORM_URL_TARGET###';">
+</FORM>
+<BR>
+<!-- ###BASKET_PAYMENT_TEMPLATE### end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>BASKET_ORDERCONFIRMATION_TEMPLATE</h3>
+<em>
+Subpart used if the GPvar "products_payment" was set. This displays the final information about the order before the payment is initiated.<BR>
+Exact same features as BASKET_TEMPLATE<BR>
+</em><br>
+<br>
+<br>
+<!-- ###BASKET_ORDERCONFIRMATION_TEMPLATE### begin
+	Subpart used if the order is finalized and this is thus the confirmation shown.
+-->
+<TABLE class="products-orderconf" >
+	<tr>
+		<td><img src="clear.gif" width=300 height=5></td>
+		<td colspan="3"><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td class="products-orderconf-hdr" colspan="4"><b>Order confirmation:</b></td>
+	</tr>	
+	<tr>
+		<td><img src="clear.gif" width=300 height=5></td>
+		<td colspan="3"><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td colspan=4>
+			Your order is complete and has number: &nbsp;<B>###ORDER_UID###</B><br><br>
+
+			Use this number as a reference when you contact us.<br>
+			The order confirmation is also sent by email to the email address entered at "Delivery" (###DELIVERY_EMAIL###). 
+                        However you should under all circumstances print out this page as a proff of your order.<br>
+			<br>
+
+			<b>Delivery and orderstatus.</b><br>
+			 Your order is dated <strong>###ORDER_DATE###</strong>.<br>
+			<br>
+			You can follow your order by using your tracking number, which is: <strong>###ORDER_TRACKING_NO###</strong>.<br>
+                        Click here to <a href="http://www.test.miklobit.com/index.php?id=477&L=3&tracking=###ORDER_TRACKING_NO###">see the status now.</a><br>
+
+			<br>					
+			<!-- ###MESSAGE_PAYMENT### 
+				This whole subpart, message_payment is substituted with the subpart 'message_payment_[number-of-method-in-typoscript]'
+			-->
+				<!-- ###MESSAGE_PAYMENT_10### begin
+					Message for payment method 10
+				-->
+				<B>Important! The next step:</B><br>
+				You have chosen to pay for your goods by a money transfer to our bank account. This is the information you need:<br><br>
+				Bank:&nbsp<strong>MBank</strong><br>Account:&nbsp<strong>76 1140 2004 0000 3402 3048 9520</strong><br><br>
+				Remember to enter the order-number, ###ORDER_UID###, on the transaction!<br>
+				<br>
+				<!-- ###MESSAGE_PAYMENT_10### end -->
+				<!-- ###MESSAGE_PAYMENT_20### begin
+					Message for payment method 20 (AllPay)
+				-->
+				<B>Credit card transaction was authorized by AllPay.pl.</B><br>
+				Delivery will be done within next 48 hours, according to our sales policy, after we get payment confirmation from Allpay.pl<br>
+				<br>
+				<!-- ###MESSAGE_PAYMENT_20### end -->					
+				<!-- ###MESSAGE_PAYMENT_40### begin
+					Message for payment method 40, in this case not a credit card but plain ordering
+				-->
+                                                                <br>
+				<br>
+				<!-- ###MESSAGE_PAYMENT_40### -->
+				<!-- ###MESSAGE_PAYMENT_50### begin
+					Message for payment method 50, in this case the customer has chosed to by on credit.
+				-->
+                                                                <br>
+                                                                <br>
+				<!-- ###MESSAGE_PAYMENT_50### -->
+			<!-- ###MESSAGE_PAYMENT### -->
+
+
+
+		###EXTERNAL_COBJECT###				
+		</td>
+	</tr>
+	<tr>
+		<td class="products-orderconf-hdr"><b>Product:</b></td>
+		<td class="products-orderconf-hdr"><b>Price:</b></td>
+		<td class="products-orderconf-hdr"><b>Quantity:</b></td>
+		<td class="products-orderconf-hdr" align=center><b>Total:</b></td>
+	</tr>
+	<!-- ###ITEM_CATEGORY_AND_ITEMS### begin -->
+		<!-- ###ITEM_CATEGORY### begin -->		
+			<tr>
+				<td class="products-orderconf-category" colspan=4><br>###CATEGORY_TITLE###<br>
+				</td>
+			</tr>
+		<!-- ###ITEM_CATEGORY### end -->
+		<!-- ###ITEM_LIST### begin -->
+			<!-- ###ITEM_SINGLE### begin-->
+				<tr>
+					<td colspan=4><img src="clear.gif" width=100% height=5></td>
+				</tr>
+				<TR>
+					<TD class="products-orderconf-item" valign=top>
+					   <!--###LINK_ITEM###--><b>###PRODUCT_TITLE###</b><!--###LINK_ITEM###-->	
+					</TD>
+					<td class="products-orderconf-item" valign=top align=right>###PRICE_TAX###</td>
+					<TD class="products-orderconf-item" valign=top>&nbsp;<INPUT size="3" maxlength="4" type="text" name="###FIELD_NAME###" value="###FIELD_QTY###">&nbsp;</TD>
+					<td class="products-orderconf-item" valign=top align=right><b>###PRICE_TOTAL_TAX###</b></td>
+				</TR>
+			<!-- ###ITEM_SINGLE### end -->
+		<!-- ###ITEM_LIST### end -->
+	<!-- ###ITEM_CATEGORY_AND_ITEMS###  end -->
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-orderconf-hdr" colspan=4><b>Billing address:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td colspan=4>
+		
+			<table cellspacing=3 width="100%">
+			<tr>
+				<td width="30%">Forename:</td>
+				<td><strong>###PERSON_FORENAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Surname:</td>
+				<td><strong>###PERSON_NAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Company:</td>
+				<td><strong>###PERSON_COMPANY###</strong></td>
+			</tr>						
+			<tr>
+				<td width="30%">VAT id:</td>
+				<td><strong>###PERSON_VAT_ID###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Street:</td>
+				<td><strong>###PERSON_STREET###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">House/local no:</td>
+				<td><strong>###PERSON_STREET_N1###/###PERSON_STREET_N2###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Postal code:</td>
+				<td><strong>###PERSON_ZIP###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">City:</td>
+				<td><strong>###PERSON_CITY###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Country:</td>
+				<td><strong>###PERSON_COUNTRY###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Phone:</td>
+				<td><strong>###PERSON_TELEPHONE###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Email:</td>
+				<td><strong>###PERSON_EMAIL###</strong></td>
+			</tr>
+	
+				<!-- ###FE_USER_SECTION###  begin -->
+			<tr>
+				<td width="30%">User name:</td>
+				<td><strong>###FE_USER_USERNAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">User ID:</td>
+				<td><strong>###FE_USER_UID###</strong></td>
+			</tr>				
+
+				<!-- ###FE_USER_SECTION###  end -->
+			</table>	
+
+		</td>
+
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-orderconf-hdr" colspan=4><b>Shipping address:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td colspan=4>
+		
+			<table cellspacing=3 width="100%">
+			<tr>
+				<td width="30%">Forename:</td>
+				<td><strong>###DELIVERY_FORENAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Surname:</td>
+				<td><strong>###DELIVERY_NAME###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Company:</td>
+				<td><strong>###DELIVERY_COMPANY###</strong></td>
+			</tr>			
+			<tr>
+				<td width="30%">Street:</td>
+				<td><strong>###DELIVERY_STREET###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">House/local no:</td>
+				<td><strong>###DELIVERY_STREET_N1###/###DELIVERY_STREET_N2###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Postal code:</td>
+				<td><strong>###DELIVERY_ZIP###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">City:</td>
+				<td><strong>###DELIVERY_CITY###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Country:</td>
+				<td><strong>###DELIVERY_COUNTRY###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Phone:</td>
+				<td><strong>###DELIVERY_TELEPHONE###</strong></td>
+			</tr>
+			<tr>
+				<td width="30%">Email:</td>
+				<td><strong>###DELIVERY_EMAIL###</strong></td>
+			</tr>			</table>		
+		
+		</td>
+
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-orderconf-hdr" colspan=4><b>Uwagi:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td colspan=4>
+			<table width="100%">
+			<tr>
+				<td width="30%">Comment:</td>
+				<td><strong>###DELIVERY_NOTE_DISPLAY###</strong></td>
+			</tr>
+			</table>
+		</td>
+
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-orderconf-hdr" colspan=4><b>Delivery/Payment:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<TR>
+		<td valign=top colspan=3>
+			Method of delivery:<br>
+			<strong>###SHIPPING_IMAGE### ###SHIPPING_TITLE###</strong>				
+			
+		</td>
+		
+		<td valign=top align=right>
+		<b>###PRICE_SHIPPING_TAX###</b><br>
+		(###PRICE_SHIPPING_NO_TAX###)<br>
+						
+		</td>
+	</TR>
+	<TR>
+		<td valign=top colspan=3>
+			Method of payment:<br>
+			<strong>###PAYMENT_IMAGE### ###PAYMENT_TITLE###</strong><br><br>
+		<!-- ###MESSAGE_PAYMENT### 
+			This whole subpart, message_payment is substituted with the subpart 'message_payment_[number-of-method-in-typoscript]'
+		-->
+			<!-- ###MESSAGE_PAYMENT_10### begin -->
+
+			<!-- ###MESSAGE_PAYMENT_10### end -->
+	                                <!-- ###MESSAGE_PAYMENT_40### begin
+			   Message for payment method 40, in this case not a credit card but plain ordering
+			-->
+                                                 <br><br>
+			<!-- ###MESSAGE_PAYMENT_40### -->
+
+		<!-- ###MESSAGE_PAYMENT### -->
+
+		</td>
+		<td valign=top align=right>
+		<b>###PRICE_PAYMENT_TAX###</b><br>
+		(###PRICE_PAYMENT_NO_TAX###)<br>
+		</td>
+	</TR>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<tr>
+		<td  class="products-orderconf-hdr" colspan=4><b>Total:</b></td>
+	</tr>
+	<tr>
+		<td colspan=4><img src="clear.gif" width=100% height=5></td>
+	</tr>
+	<TR>
+		<td valign=top colspan=3>
+			<strong>Total amount in PLN:</strong>				
+		</td>
+		
+		<td valign=top align=right colspan=3 nowrap>
+		<b>PLN ###PRICE_TOTAL_TAX###</b><br>
+		( ex.VAT: ###PRICE_TOTAL_NO_TAX###)<br>
+						
+		</td>
+	</TR>
+		<tr>
+			<td colspan=4>
+	
+	<br>
+	<br>
+                Thanks for doing business with us!
+                <br>
+
+	<br>
+	
+	&nbsp;&nbsp;&nbsp;<strong>Miklobit shop</strong><br>
+	&nbsp;&nbsp;&nbsp;ul. Cyprysowa 7/5 <br>
+	&nbsp;&nbsp;&nbsp;43-600 Jaworzno<br>
+	&nbsp;&nbsp;&nbsp;Poland<br>	
+	&nbsp;&nbsp;&nbsp;Phone: +48 603 196 171, +48 32 616 40 82
+        <br>
+		        </td>
+	</tr>
+</TABLE>
+<br>
+<BR>
+<!-- ###BASKET_ORDERCONFIRMATION_TEMPLATE### end -->
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>BASKET_TEMPLATE_EMPTY</h3>
+<em>
+If the basket is empty this subpart is displayed<br>
+</em><br>
+<br>
+<br>
+<!-- ###BASKET_TEMPLATE_EMPTY### begin
+	If the basket is empty this subpart is displayed
+-->
+<B>Basket is empty.</B>
+<!-- ###BASKET_TEMPLATE_EMPTY### end -->
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>BASKET_REQUIRED_INFO_MISSING</h3>
+<em>
+If payment is initiated but the required information fields are not filled in correctly, this happens.<br>
+</em><br>
+<br>
+<br>
+<!-- ###BASKET_REQUIRED_INFO_MISSING### begin
+	If payment is initiated but the required information fields are not filled in correctly, this happens
+-->
+<B>You have not filled in all required fields with address information.<br>
+ Please go back and do that!</B><br><br>
+	<FORM method="post" action="###FORM_URL###">
+	<input type="Submit" name="products_info" value="Enter address information" action='###FORM_URL_INFO###';">
+	</FORM>
+<!-- ###BASKET_REQUIRED_INFO_MISSING### end -->
+
+
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>TRACKING_DISPLAY_INFO</h3>
+<em>
+Displays the view of the order status by tracking codes.<br>
+</em><br>
+<br>
+<br>
+<!-- ###TRACKING_DISPLAY_INFO### begin
+	Displays the view of the order status by tracking codes.
+-->
+<B>Your order (###ORDER_UID###) has this status:</B><br>
+<br>
+
+<table class="products-tracking-info">
+	<tr>
+		<td><strong>Time:</strong></td>
+		<td><strong>Code:</strong></td>
+		<td><strong>Action:</strong></td>
+		<td><strong>Comment:</strong></td>
+	</tr>
+	<!-- ###STATUS_ITEM### begin 
+		This part is repeated for each order status item and finally this part in the template code is substituted with the accumulated code for all order status actions.
+	-->		
+	<tr>
+		<td nowrap valign=top>###ORDER_STATUS_TIME### &nbsp;</td>
+		<td valign=top>###ORDER_STATUS### &nbsp;</td>
+		<td nowrap valign=top>###ORDER_STATUS_INFO### &nbsp;</td>
+		<td valign=top>###ORDER_STATUS_COMMENT### &nbsp;</td>
+	</tr>
+	<!-- ###STATUS_ITEM### end -->		
+</table><br>
+(The last line refer last change)<br>
+<br>
+
+<!-- ###ADMIN_CONTROL### begin -->		
+<table class="products-admin-control"><tr><td>
+	<table border=0 cellpadding=10 cellspacing=0 bgcolor="#a6bab1"><tr><td>
+		<strong>Shop ADMIN:</strong><br>
+		Order: ####ORDER_UID###
+		<br>
+
+		<!-- ###ADMIN_CONTROL_OK### begin -->		
+		<FORM method="post" action="###FORM_URL###">
+		<select name="orderRecord[status][]" size="9" multiple>
+			###STATUS_OPTIONS###
+		</select>	
+			<br>
+			Uwagi do nowego statusu:<br>
+			<textarea cols="40" rows="5" name="orderRecord[status_comment]"></textarea><br>
+	
+			<input type="hidden" name="tracking" value="###TRACKING_NUMBER###"><br>
+			<input type="hidden" name="update_code" value="###UPDATE_CODE###"><br>
+			<input type="Submit" name="submit" value="Add order status">
+			</FORM>
+			<hr>
+			Switch to another order:
+			<FORM method="post" action="###FORM_URL###">
+				<select name="tracking" size="9">
+					###OTHER_ORDERS_OPTIONS###
+				</select><br><br>
+				<input type="Submit" name="submit" value="Select">
+				<input type="hidden" name="update_code" value="###UPDATE_CODE###"><br>
+			</FORM>
+		<!-- ###ADMIN_CONTROL_OK### begin -->		
+		<!-- ###ADMIN_CONTROL_DENY### begin -->		
+			<FORM method="post" action="###FORM_URL###">
+			<input type="hidden" name="tracking" value="###TRACKING_NUMBER###"><br>
+			Code:<br>
+			<input type="password" size=40 name="update_code" value="###UPDATE_CODE###">
+			<input type="Submit" name="submit" value="Enter code">
+			</FORM>
+		<!-- ###ADMIN_CONTROL_DENY### begin -->		
+		</td></tr></table>
+	</td></tr>
+</table><br>
+<!-- ###ADMIN_CONTROL### end -->
+
+
+<strong>Email message:</strong><br>
+You can recieve a message to the contact email of the order (###FIELD_EMAIL###) each time the status is updated<br><br>
+	<FORM method="post" action="###FORM_URL###">
+	
+	<input type="hidden" name="orderRecord[email_notify]" value="0">
+	<input type="checkbox" name="orderRecord[email_notify]" value="1"###FIELD_EMAIL_NOTIFY###>Recieve message by status changes.<br>
+	<input type="text" size=40 name="orderRecord[email]" value="###FIELD_EMAIL###">
+	<input type="hidden" name="tracking" value="###TRACKING_NUMBER###">
+	
+	<input type="Submit" name="submit" value="Update">
+	</FORM>
+<br><br>
+<strong>Message to the shop:</strong><br>
+You can send a message to the shop regarding this order.<br><br>
+	<FORM method="post" action="###FORM_URL###">
+	<input type="hidden" name="tracking" value="###TRACKING_NUMBER###">
+	Select topic:<br>
+	<select name="orderRecord[status][]" size="1">
+		<!-- NOTICE: The values/topics MUST correspond with those setup in the TypoScript of the shop! -->
+		<option value=51>Message from the customer to the shop</option>
+		<option value=50>The customer requests to cancel the order</option>
+	</select>	
+	<br>
+	Comment to follow:<br>
+	<textarea cols="40" rows="5" name="orderRecord[status_comment]"></textarea><br>
+	<input type="Submit" name="submit" value="Send message">
+	</FORM>
+<br>
+<br>
+<B>This is the original order confirmation:</B><br><br>
+<HR>
+<br>
+
+###ORDER_HTML_OUTPUT###
+<!-- ###TRACKING_DISPLAY_INFO### end -->
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>TRACKING_ENTER_NUMBER</h3>
+<em>
+Displays form for entering the tracking number.<br>
+</em><br>
+<br>
+<br>
+<!-- ###TRACKING_ENTER_NUMBER### begin
+	Displays form for entering the tracking number.
+-->
+<B>Enter your tracking code:</B><br>
+	<FORM method="post" action="###FORM_URL###">
+	<input type="text" name="tracking"><br>
+	<input type="Submit" name="submit" value="See status">
+	</FORM>
+<br>
+<!-- ###ADMIN_CONTROL### begin -->		
+<table class="products-admin-control"><tr><td>
+	<table border=0 cellpadding=10 cellspacing=0 bgcolor="#a6bab1"><tr><td>
+		<strong>Shop ADMIN:</strong><br>
+		<!-- ###ADMIN_CONTROL_DENY### begin -->		
+			<FORM method="post" action="###FORM_URL###">
+			Code:<br>
+			<input type="password" size=40 name="update_code" value="">
+			<input type="Submit" name="submit" value="Enter code">
+			</FORM>
+		<!-- ###ADMIN_CONTROL_DENY### begin -->		
+		</td></tr></table>
+	</td></tr>
+</table><br>
+<!-- ###ADMIN_CONTROL### end -->
+
+	
+	
+<!-- ###TRACKING_ENTER_NUMBER### end -->
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>TRACKING_WRONG_NUMBER</h3>
+<em>
+Displays error message if no tracking code.<br>
+</em><br>
+<br>
+<br>
+<!-- ###TRACKING_WRONG_NUMBER### begin
+	Displays error message if no tracking code.
+-->
+<B>The tracking code did not exist! Make sure it was correct and try again!</B><br>
+
+	<FORM method="post" action="###FORM_URL###">
+	<input type="text" name="tracking"><br>
+	<input type="Submit" name="submit" value="See status">
+	</FORM>
+
+<!-- ###TRACKING_WRONG_NUMBER### end -->
+
+
+
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>TRACKING_EMAILNOTIFY_TEMPLATE</h3>
+<em>
+Subpart used as template for the notify emails.<br>
+First line is used as subject for the mail.<br>
+</em><br>
+<br>
+<br>
+<pre>
+<!-- ###TRACKING_EMAILNOTIFY_TEMPLATE### begin
+Subpart used as template for the notify emails
+First line is used as subject for the mail.
+-->
+
+Miklobit shop order status (####ORDER_UID###)
+
+ORDER INFORMATION (####ORDER_UID###): 
+The status of your order has been changed:
+
+Time:    ###ORDER_STATUS_TIME###
+Status:  ###ORDER_STATUS_INFO###
+
+Comment: 
+###ORDER_STATUS_COMMENT###
+
+
+TRACKING:
+You get this email, because you have chosen to recieve information about your order. 
+		
+Click here to see actual information now:
+        http://www.miklobit.com/?id=477&tracking=###ORDER_TRACKING_NO###
+
+
+
+Best regards
+        Miklobit shop
+        ul. Cyprysowa 7/5
+        43-600 Jaworzno
+        Poland
+        Phone: +48 603 196 171, +48 32 616 40 82
+	
+<!-- ###TRACKING_EMAILNOTIFY_TEMPLATE### end -->
+</pre>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<BR><BR><BR><BR><HR><BR><BR><BR>
+<h3>EMAIL_PLAINTEXT_TEMPLATE</h3>
+<em>
+Subpart used as template for the order-emails.<br>
+First line is used as subject for the mail.<br>
+</em><br>
+<br>
+<br>
+<pre>
+<!-- ###EMAIL_PLAINTEXT_TEMPLATE### begin
+	Subpart used as template for the order-emails
+	First line is used as subject for the mail.
+-->
+
+Miklobit shop: order ####ORDER_UID###
+
+ORDER CONFIRMATION: 
+Your order is complete and has number ###ORDER_UID###.
+Use this number as a reference when you contact us.
+
+ORDER TRACKING:
+You can follow your order by using your tracking number, which is: <strong>###ORDER_TRACKING_NO###</strong>
+Current order status is available at: http://www.miklobit.com/index.php?id=477&L=3&tracking=###ORDER_TRACKING_NO###
+
+
+
+ORDER DETAILS:
+
+1) Products:
+	<!-- ###ITEM_CATEGORY_AND_ITEMS### -->
+		<!-- ###ITEM_LIST### begin -->
+			<!-- ###ITEM_SINGLE### begin-->
+Product: ###PRODUCT_TITLE###
+Code: ###PRODUCT_ITEMNUMBER###
+Price (inc.VAT): ###PRICE_TAX### z³
+Quantity: ###FIELD_QTY###        = ###PRICE_TOTAL_TAX### z³ inc.VAT
+			<!-- ###ITEM_SINGLE### end -->
+		<!-- ###ITEM_LIST### end -->
+	<!-- ###ITEM_CATEGORY_AND_ITEMS###  end -->
+
+2) Billing address:
+Forename:			###PERSON_FORENAME###
+Surname:			###PERSON_NAME###
+Company:			###PERSON_COMPANY###
+VAT id:             ###PERSON_VAT_ID###
+Street:             ###PERSON_STREET###    ###PERSON_STREET_N1### /  ###PERSON_STREET_N2###
+Postal code:		###PERSON_ZIP###
+City:				###PERSON_CITY###
+Country:			###PERSON_COUNTRY###
+Phone:				###PERSON_TELEPHONE###
+e-mail:				###PERSON_EMAIL###
+
+
+3) Shipping address:
+Forename:			###DELIVERY_FORENAME###
+Surname:			###DELIVERY_NAME###
+Company:			###DELIVERY_COMPANY###
+Street:				###DELIVERY_STREET###    ###DELIVERY_STREET_N1### /  ###DELIVERY_STREET_N2###
+Postal code:		###DELIVERY_ZIP###
+City:				###DELIVERY_CITY###
+Country:			###DELIVERY_COUNTRY###
+Phone:          	###DELIVERY_TELEPHONE###
+e-mail:				###DELIVERY_EMAIL###
+
+
+4) Note:
+###DELIVERY_NOTE_DISPLAY###
+
+
+5) Delivery:
+###SHIPPING_TITLE###				
+Charge: ###PRICE_SHIPPING_TAX### z³ inc.VAT (###PRICE_SHIPPING_NO_TAX### z³ excl.VAT)
+
+
+6) Payment method:
+###PAYMENT_TITLE###
+Charge: ###PRICE_PAYMENT_TAX### z³ inc.VAT (###PRICE_PAYMENT_NO_TAX### z³ excl.VAT)
+
+
+Total: ________________________ ###PRICE_TOTAL_TAX### z³ inc.VAT
+(###PRICE_TOTAL_NO_TAX### z³ excl.VAT)
+
+
+Best regards, Miklobit shop
+
+
+
+<!-- ###EMAIL_PLAINTEXT_TEMPLATE### end -->
+</pre>
+
+
+</body>
+</html>
+
+<!-- ###EMAIL_HTML_SHELL### begin
+	This is wrapping HTML code for the HTML-emails sent. The marker, HTML_BODY, is substituted with the order content.
+-->
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+<html>
+<head>
+<STYLE TYPE="text/css">
+<!--
+/* style from main template */
+
+body  { display:block;  background: #f0f0f0; font-size: 10px; font-family:  Verdana, Tahoma, sans-serif; width: 550px; margin-top: 20px; text-align: center ; }
+table { font: 10px  Verdana, Tahoma, sans-serif; }
+ol    { margin-top : 2px; }
+p     { font-family: Verdana, Tahoma, Sans-serif; font-size: 10px; font-style: normal; font-weight: medium }
+td p { font-family: Verdana, Tahoma, Sans-serif; font-size: 10px; font-style: normal; font-weight: medium }
+
+H1, H2, H3, H4, H5, P, TD, UL, OL, BLOCKQUOTE, INPUT, TEXTAREA, SELECT { font-family: Verdana, Tahoma; color: #000000; }
+PRE { font-family: monospace; }
+A { color: #b60202; text-decoration: none; }
+A:hover { color: #000000; text-decoration: underline; }
+FORM { margin: 0px 0px 0px 0px;}
+P, PRE { margin: 0px 0px 0px 0px; }
+P, TD, UL, OL { font-size: 10px; }
+INPUT, TEXTAREA, SELECT { padding-left: 5px; font-size: 10px; }
+
+/* style from tt_products template */ 
+TABLE.products-item-list, 
+TABLE.products-item-single, 
+TABLE.products-basket,
+TABLE.products-basket-info 
+TABLE.products-orderconf { border: 0px solid red ;  cell-spacing: 0px; cellpadding: 0px; empty-cells: show ; 
+                                   border-collapse: collapse; width: 100% ;   
+}
+TABLE.products-tracking-info { border: 1px solid  ;  cell-spacing: 4px; cellpadding: 0px; empty-cells: show ; 
+                                   border-collapse: collapse; width: 100% ;   
+}
+TABLE.products-admin-control { border: 1px solid  ;  cell-spacing: 0px; cellpadding: 0px; empty-cells: show ; 
+                                   border-collapse: collapse; width: 100% ; 
+                                   background: #a6bab1;
+}
+
+DIV.products-item-list-prev-page { text-align: left ; }
+DIV.products-item-list-next-page { text-align: right ; }
+
+TD.products-item-hdr, 
+TD.products-basket-hdr,
+TD.products-basket-info-hdr,  
+TD.products-orderconf-hdr  { background: #a6bab1; font-size: 10px; color: #000000 ; border: 0px solid blue ; }
+TD.products-item-hdr  a:link { color: #b60202; text-decoration: none }
+TD.products-item-hdr  a:hover { color: #000000; text-decoration: underline }
+TD.products-item-hdr  a:visited { color: #b60202; text-decoration: none }
+TD.products-item-hdr  a:visited:hover { color: #000000; text-decoration: underline }
+
+TD.products-item-img { vertical-align: top ; }
+TD.products-item-txt,
+TD.products-basket-info-txt  { font-size: 10px; text-align: justify; margin: 5px ;}
+TD.products-item-price { text-align: left; vertical-align: top ; font-size: 10px; }
+
+.products-basket-info-country SELECT { width: 180px; }
+.products-item-price STRONG { color: #b60202; }
+.products-item-search-empty { }
+
+// .products-basket td { border: 1px dotted blue; } 
+.products-basket-category {  } 
+
+.products-basket-item, 
+.products-orderconf-item { font-size: 10px; margin: 5px  }
+TD.products-basket-item a:link { color: #b60202; text-decoration: none; font-weight: bold; }
+TD.products-basket-item a:hover { color: #000000; text-decoration: underline; font-weight: bold; }
+TD.products-basket-item a:visited { color: #b60202; text-decoration: none; font-weight: bold; }
+TD.products-basket-item a:visited:hover { color: #000000; text-decoration: underline; font-weight: bold; }
+
+.products-orderconf-category {  } 
+-->
+</STYLE>
+<title>Miklobit shop order confirmation</title>
+<meta http-equiv="Content-Type" content="text/html; charset=iso-8859-2">
+<meta name="generator" content="Typo 3.6.1 CMS">
+<script language="javascript">
+<!--
+	browserName = navigator.appName;
+	browserVer = parseInt(navigator.appVersion);
+	var msie4 = (browserName == "Microsoft Internet Explorer" && browserVer >= 4);
+	if ((browserName == "Netscape" && browserVer >= 3) || msie4) {version = "n3";} else {version = "n2";}
+
+	function openPic(url,winName,winParams)	{
+		var theWindow = window.open(url,winName,winParams);	
+		if (theWindow)	{theWindow.focus();}
+	}
+	function blurLink(theObject)	{
+		if (msie4)	{
+			theObject.blur();
+		}
+	}
+
+	
+// End Hiding Script -->
+</script>
+</head>
+<BODY>
+
+###HTML_BODY###
+
+</body></html>
+<!-- ###EMAIL_HTML_SHELL### end-->

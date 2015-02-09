@@ -1,0 +1,8 @@
+2005.05.28  Added unit of measure, unit factor
+2005.05.20  Added datasheet pdf file
+2005.05.14  Hierarchical category
+			Added Category note ( RTE ) and image
+2005.04.11 	Added support for VAT in EU/non EU countries ( dont charge VAT if customer from EU and have valid VAT nr )
+2005.02.11	Content record configuration changed to flex_form
+2005.02.10	Product note changed to RTE field
+     

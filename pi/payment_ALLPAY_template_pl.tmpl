@@ -1,0 +1,83 @@
+<!DOCTYPE HTML PUBLIC "-//W3C//DTD HTML 4.0 Transitional//EN">
+
+<html>
+<head>
+	<title>Untitled</title>
+</head>
+
+<body>
+
+
+
+<!-- ###ALLPAY_CARD_TEMPLATE### 
+
+This subpart is used to display the confirmation dialog before sending
+to AllPay gateway
+
+
+Has the standard fields of the normal BASKET-templates 
++  ###HIDDEN_FIELDS###  (mandatory for the ALLPAY hidden fields)
+
+-->
+
+<p>Po wybraniu przycisku "Dalej" przejdziesz na stronê serwisu bezpiecznych p³atno¶ci internetowych - AllPay.pl.</p>
+<br>
+
+<div style="text-align: center">
+<form name="payform" action="###ALLPAY_URL###" method=POST autocomplete="off">
+	###HIDDEN_FIELDS###
+<input type=submit value="Dalej">	
+</form>
+</div>
+
+<script language="JavaScript">
+//   document.payform.submit();
+</script>
+
+
+<!-- ###ALLPAY_CARD_TEMPLATE###	 end -->
+
+
+
+
+
+
+<!-- ###ALLPAY_DECLINE_TEMPLATE### 
+
+This subpart is used to display information IF the payment was declined!
+
+Has the standard fields of the normal BASKET-templates 
++  ###REASON_CODE###  which is the global var, $reason
+
+-->
+
+<div style="text-color: #ff0000">
+<strong>Transakcja zosta³a odrzucona przez serwis AllPay.pl </strong><br>
+<strong>lub u¿ytkownik wycofa³ p³atno¶æ </strong><br>
+<br>
+</div>
+
+Prosimy wybraæ inny sposób p³atno¶ci lub, je¶li wybrano zap³atê kart± p³atnicz±, spróbowaæ ponownie przy uzyciu innej karty<br>
+<br><br>
+
+<form name="declineform" action="###DECLINE_URL###" method=POST autocomplete="off">
+ <input type=submit value="Kontynuacja zamówienia / p³atno¶ci">
+</form>
+
+<!-- ###ALLPAY_DECLINE_TEMPLATE###	 end -->
+
+
+
+
+
+<!-- ###ALLPAY_ACCEPT_TEMPLATE### 
+Used for dummy purpose onlu
+-->
+DUMMY
+<!-- ###ALLPAY_ACCEPT_TEMPLATE###	 end -->
+
+
+
+
+</body>
+</html>

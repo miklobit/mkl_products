@@ -1,0 +1,85 @@
+<T3DataStructure>
+	<meta>
+	    <langDisable>1</langDisable>
+	</meta>
+	  <ROOT>
+	    <type>array</type>
+	    <el>
+	      <display_mode>
+			<TCEforms>
+				<label>LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode</label>
+				<config>
+					<type>select</type>
+					<items>
+					    <numindex index="1">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.1</numindex>
+							<numindex index="1">LIST</numindex>					    
+					    </numindex>
+					    <numindex index="2">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.2</numindex>
+							<numindex index="1">RECORDS</numindex>					    
+					    </numindex>					    
+					    <numindex index="3">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.3</numindex>
+							<numindex index="1">SINGLE</numindex>					    
+					    </numindex>
+					    <numindex index="4">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.4</numindex>
+							<numindex index="1">SEARCH</numindex>					    
+					    </numindex>
+					    <numindex index="5">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.5</numindex>
+							<numindex index="1">BASKET</numindex>					    
+					    </numindex>
+					    <numindex index="6">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.6</numindex>
+							<numindex index="1">PAYMENT</numindex>					    
+					    </numindex>
+					    <numindex index="7">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.7</numindex>
+							<numindex index="1">FINALIZE</numindex>					    
+					    </numindex>		
+					    <numindex index="8">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.8</numindex>
+							<numindex index="1">INFO</numindex>					    
+					    </numindex>
+					    <numindex index="9">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.9</numindex>
+							<numindex index="1">TRACKING</numindex>					    
+					    </numindex>	
+					    <numindex index="10">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.10</numindex>
+							<numindex index="1">CURRENCY</numindex>					    
+					    </numindex>		
+					    <numindex index="11">
+							<numindex index="0">LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.display_mode.11</numindex>
+							<numindex index="1">PRDCOUNTER</numindex>					    
+					    </numindex>						    				    				   					    			    
+					</items>
+					<size>5</size>
+					<minitems>1</minitems>
+					<maxitems>5</maxitems>
+				</config>
+			</TCEforms>
+	      </display_mode>
+	      <product_records>
+			<TCEforms>
+				<label>LLL:EXT:mkl_products/locallang_tca.php:tt_content.pi_flexform.product_records</label>
+				<!-- <displayCond>FIELD:display_mode:=:2</displayCond> -->
+				<config>
+					<type>select</type>
+      				<items type="Array">
+        				<numIndex index="0"></numIndex>
+        				<numIndex index="1"></numIndex>
+      				</items>
+      				<foreign_table>tt_products</foreign_table> 
+      				<foreign_table_where>ORDER BY tt_products.uid</foreign_table_where>					
+					<size>5</size>
+					<minitems>0</minitems>
+					<maxitems>50</maxitems>
+				</config>
+			</TCEforms>
+	      </product_records>	      
+	    </el>    
+	  </ROOT>
+</T3DataStructure>

@@ -1,0 +1,190 @@
+## Includes the productsLib:
+includeLibs.ts_products = EXT:mkl_products/pi/class.tx_ttproducts.php
+
+
+## This enables the tt_content.list item to display the guestbook:
+plugin.tt_products >
+plugin.tt_products = USER
+plugin.tt_products {
+  userFunc = tx_ttproducts->main_products
+
+  templateFile = {$plugin.tt_products.file.templateFile}
+  pid_list.field = pages
+  recursive.field = recursive
+  code.field = select_key
+
+  limit = {$plugin.tt_products.limit}
+  image {
+    file.maxW = {$plugin.tt_products.maxW_single}
+    imageLinkWrap = {$plugin.tt_products.clickEnlarge}
+    imageLinkWrap {
+      enable = 1
+      bodyTag = <BODY bgColor=black>
+      wrap = <A href="javascript:close();"> | </A>
+      width = 400m
+      height = 400
+
+      JSwindow = 1
+      JSwindow.newWindow = 1
+      JSwindow.expand = 17,20
+    }
+  }
+  listImage < .image
+  listImage.file.maxW = {$plugin.tt_products.maxW_list}
+  listImage.imageLinkWrap = {$plugin.tt_products.clickEnlarge_list}
+
+  basketImage < .image
+  basketImage.file.maxW = {$plugin.tt_products.maxW_basket}
+  basketImage.imageLinkWrap = {$plugin.tt_products.clickEnlarge_basket}
+
+  image.wrap = | <BR>
+
+  noImageAvailable = {$plugin.tt_products.file.noImageAvailable}
+  datasheetIcon {
+   file = {$plugin.tt_products.file.datasheetIcon}
+  }
+  wrap1.wrap = {$plugin.tt_products.wrap1}
+  wrap2.wrap = {$plugin.tt_products.wrap2}
+  color1.wrap = {$plugin.tt_products.color1}
+  color2.wrap = {$plugin.tt_products.color2}
+  color3.wrap = {$plugin.tt_products.color3}
+
+  displayListCatHeader = {$plugin.tt_products.displayListCatHeader}
+  displayBasketCatHeader = {$plugin.tt_products.displayBasketCatHeader}
+
+  PIDitemDisplay = {$plugin.tt_products.PIDitemDisplay}
+  PIDsearch = {$plugin.tt_products.PIDsearch}
+  PIDbasket = {$plugin.tt_products.PIDbasket}
+  PIDstoreRoot = {$plugin.tt_products.PIDstoreRoot}
+  PIDorderTracking = {$plugin.tt_products.PIDorderTracking}
+  PID_sys_products_orders = 0
+#  PIDinfo = 209
+#  PIDfinalize = 210
+#  PIDthanks = 211
+
+   parseFunc < styles.content.parseFunc
+   categoryHeader = TEXT
+   categoryHeader.current = 1
+# categoryHeader.field = header
+#  categoryHeader.debugData = 1
+
+  priceDec = {$plugin.tt_products.priceDec}
+  priceDecPoint = {$plugin.tt_products.priceDecPoint}
+  priceThousandPoint = {$plugin.tt_products.priceThousandPoint}
+  currencySymbol = PLN
+  countryCode = POL
+
+  TAXpercentage = {$plugin.tt_products.TAXpercentage}
+  TAXincluded = {$plugin.tt_products.TAXincluded}
+  TAXeu = {$plugin.tt_products.TAXeu}
+
+  lockLoginUserInfo = 1
+  requiredInfoFields = forename,name,street,street_n1,zip,city,country_code,telephone,email
+  orderNumberPrefix = order_
+  orderEmail_from = shop@myTypo3Shop.com
+  orderEmail_fromName = My Typo3 Shop
+  orderEmail_to = shop@myTypo3Shop.com
+  orderEmail_htmlmail = 0
+  orderEmail_htmlCharset = utf-8
+  email_notify_default = 1
+  statusCodes {
+    1 = Order submitted by user
+    2 = Order is recieved and accepted by store
+    10 = Shop is awaiting goods from third-party
+    11 = Shop is awaiting customer payment
+    12 = Shop is awaiting material from customer
+    20 = Goods shipped to customer
+    30 = Other message from store
+    50 = Customer request for cancelling
+    51 = Message from customer to shop
+    100 = Order shipped and closed
+    101 = Order closed
+    200 = Order cancelled
+  }
+  update_code = password
+  statusDate_stdWrap.strftime= %e-%m-%y %H:%M
+  orderDate_stdWrap.strftime= %e-%m-%y
+}
+
+## EXAMPLE payment config:
+plugin.tt_products.payment {
+  radio = 1
+  10.title = Master Card
+  10.image.file = media/logos/mastercard.gif
+  10.priceTax = 
+  10.priceNoTax =  
+  10.calculationScript = EXT:mkl_products/pi/products_comp_calcScript.inc
+
+  20.title = AllPay.pl - credit card
+  20.priceTax = 0.00
+  20.priceNoTax = 0.00 
+  20.handleScript = EXT:mkl_products/pi/payment_ALLPAY.php
+  20.handleScript  {
+     templateFile = EXT:mkl_products/pi/payment_ALLPAY_template_en.tmpl
+     returnURL = http://www.webshop.com
+     merchant = 9999
+     channel = 0
+     currency = PLN,EUR,USD
+  }
+
+  21.title = AllPay.pl - mTransfer
+  21.priceTax = 0.00
+  21.priceNoTax = 0.00 
+  21.handleScript = EXT:mkl_products/pi/payment_ALLPAY.php
+  21.handleScript  {
+     templateFile = EXT:mkl_products/pi/payment_ALLPAY_template_en.tmpl
+     returnURL = http://www.webshop.com
+     merchant = 9999
+     channel = 1
+     currency = PLN
+  }
+
+  22.title = AllPay.pl - Pay with Inteligo
+  22.priceTax = 0.00
+  22.priceNoTax = 0.00 
+  22.handleScript = EXT:mkl_products/pi/payment_ALLPAY.php
+  22.handleScript  {
+     templateFile = EXT:mkl_products/pi/payment_ALLPAY_template_en.tmpl
+     returnURL = http://www.webshop.com
+     merchant = 9999
+     channel = 2
+     currency = PLN
+  }
+
+  40.title = Money transfer
+  40.image.file = media/logos/money.gif
+  40.priceTax = 
+  40.priceNoTax = 
+  40.percentOfGoodstotal = 1.45
+
+  50.title = Credit in-store
+  50.image.file = 
+  50.priceTax = 
+  50.priceNoTax = 
+}
+
+## EXAMPLE shipping config:
+plugin.tt_products.shipping {
+  10.title = Ground
+  10.image.file = media/logos/pakketrans.gif
+  10.image.params = align=absmiddle
+  10.priceTax = 40
+  10.priceNoTax = 32
+
+  20.title = Airmail
+  20.image.file = media/logos/postdanmark.gif
+  10.image.params = align=absmiddle
+  20.priceTax = 120
+  20.priceNoTax = 120
+  20.calculationScript = EXT:mkl_products/pi/products_shipping_calcScript.inc  
+
+  40.title = Pick up in store
+  40.excludePayment = 10,40
+}
+
+
+
+## This enables the record item to display product items
+tt_products >
+tt_products = < plugin.tt_products
+tt_products.displayCurrentRecord = 1

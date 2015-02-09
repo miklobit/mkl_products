@@ -1,0 +1,48 @@
+/* style for tt_products template */
+ 
+TABLE.products-item-list, 
+TABLE.products-item-single, 
+TABLE.products-basket,
+TABLE.products-basket-info 
+TABLE.products-orderconf { border: 0px solid red ;  cell-spacing: 0px; cellpadding: 0px; empty-cells: show ; 
+                                   border-collapse: collapse; width: 100% ;   
+}
+TABLE.products-tracking-info { border: 1px solid  ;  cell-spacing: 4px; cellpadding: 0px; empty-cells: show ; 
+                                   border-collapse: collapse; width: 100% ;   
+}
+TABLE.products-admin-control { border: 1px solid  ;  cell-spacing: 0px; cellpadding: 0px; empty-cells: show ; 
+                                   border-collapse: collapse; width: 100% ; 
+                                   background: #a6bab1;
+}
+
+DIV.products-item-list-prev-page { text-align: left ; }
+DIV.products-item-list-next-page { text-align: right ; }
+
+TD.products-item-hdr, 
+TD.products-basket-hdr,
+TD.products-basket-info-hdr,  
+TD.products-orderconf-hdr  { background: #a6bab1; font-size: 10px; color: #000000 ; border: 0px solid blue ; }
+TD.products-item-hdr  a:link { color: #b60202; text-decoration: none }
+TD.products-item-hdr  a:hover { color: #000000; text-decoration: underline }
+TD.products-item-hdr  a:visited { color: #b60202; text-decoration: none }
+TD.products-item-hdr  a:visited:hover { color: #000000; text-decoration: underline }
+
+TD.products-item-img { vertical-align: top ; }
+TD.products-item-txt,
+TD.products-basket-info-txt  { font-size: 10px; text-align: justify; margin: 5px ;}
+TD.products-item-price { text-align: left; vertical-align: top ; font-size: 10px; }
+.products-item-price STRONG { color: #b60202; }
+
+.products-item-search-empty { }
+
+// .products-basket td { border: 1px dotted blue; } 
+.products-basket-category {  } 
+
+.products-basket-item, 
+.products-orderconf-item { font-size: 10px; margin: 5px  }
+TD.products-basket-item a:link { color: #b60202; text-decoration: none; font-weight: bold; }
+TD.products-basket-item a:hover { color: #000000; text-decoration: underline; font-weight: bold; }
+TD.products-basket-item a:visited { color: #b60202; text-decoration: none; font-weight: bold; }
+TD.products-basket-item a:visited:hover { color: #000000; text-decoration: underline; font-weight: bold; }
+
+.products-orderconf-category {  } 

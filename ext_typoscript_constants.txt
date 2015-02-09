@@ -1,0 +1,68 @@
+plugin.tt_products {
+    # cat=plugin.products/file; type=file[html,htm,tmpl,txt]; label= Template File: This is a simple textfile where each part of the shopping basket is defined with HTML-code. To see an example with explanations, take a look at EXT:tt_products/pi/products_template_en.tmpl which is the default.
+  file.templateFile = EXT:mkl_products/pi/products_template_en.tmpl
+    # cat=plugin.products/file; type=file[IMAGE_EXT]; label= Alternative Image: This image is used if there is no image present for the product
+  file.noImageAvailable =
+
+    # cat=plugin.products/file; type=pdf; label= datasheet icon: 
+  file.datasheetIcon = EXT:mkl_products/pi/icons/pdf.gif
+
+    # cat=plugin.products/typo; type=wrap; label= Wrap 1: This wrap is used in the template-file.
+  wrap1 = <font face="verdana" size=2 color=black> | </font>
+    # cat=plugin.products/typo; type=wrap; label= Wrap 2: This wrap is used in the template-file.
+  wrap2 = <font face="verdana" size=1 color=black> | </font>
+
+    # cat=plugin.products/color; type=color; label= Color 1: This bgcolor is used in the template-file.
+  color1 = #cccccc
+    # cat=plugin.products/color; type=color; label= Color 2: This bgcolor is used in the template-file.
+  color2 = #999999
+    # cat=plugin.products/color; type=color; label= Color 3: This bgcolor is used in the template-file.
+  color3 = #333333
+
+    # cat=plugin.products//; type=boolean; label= Click Enlarge, Single display: If this option is set, users can click the image of a product and it'll pop-up in a separate window at a larger size.
+  clickEnlarge = 1
+    # cat=plugin.products//; type=boolean; label= Click Enlarge, List display: As above, but for the images in the product-lists and search-results
+  clickEnlarge_list = 1
+    # cat=plugin.products//; type=boolean; label= Click Enlarge, Basket display: As above, but for the images in the basket
+  clickEnlarge_basket = 1
+
+    # cat=plugin.products//; type=boolean; label= Display Category Header in list: If this option is set, the category headers (page titles) will automatically be displayed in the product lists. This is not always convenient because you might have chosen a header-title for the "list" content element.
+  displayListCatHeader = 1
+    # cat=plugin.products//; type=boolean; label= Display Category Header in basket: If this option is set, the category headers (page titles) will automatically be displayed in the basket lists.
+  displayBasketCatHeader = 0
+
+    # cat=plugin.products//; type=int+; label= Max items displayed: The maximum number of items displayed on one page. 
+  limit = 50
+
+    # cat=plugin.products/dims; type=int+; label= Max image width, single display: The maximum width in pixels of an image when displayed with a single product.
+  maxW_single = 200
+    # cat=plugin.products/dims; type=int+; label= Max image width, list display: The maximum width in pixels of an image when displayed in lists and searchresults.
+  maxW_list = 50
+    # cat=plugin.products/dims; type=int+; label= Max image width, basket display: The maximum width in pixels of an image when displayed in the shopping-basket.
+  maxW_basket = 100
+
+    # cat=plugin.products//; type=int+; label=PID for single item display: If you want a certain page to be used for display of item details, please enter the PID (page-uid) here.
+  PIDitemDisplay =
+    # cat=plugin.products//; type=int+; label=PID for search page: If you want all product searches to go to a specific page, enter the PID it here! NOTE: If you set this PID, all searchqueries will (must) be handled with a list content element with the code "search" on that page.
+  PIDsearch =
+    # cat=plugin.products//; type=int+; label=PID for basket page: If you want every change in the number of items anywhere to go to a specific page (eg. the shopping basket page), enter the PID here.
+  PIDbasket =
+    # cat=plugin.products//; type=int+; label=PID for store root: This is the PID of the rootPage of the store. If not set the store will operate over all pages from the root of the site. But if the site has many pages, performance may improve
+  PIDstoreRoot = 
+
+    # cat=plugin.products//; type=small; label=TAX percentage: Type= Double (means, "use . as decimal point")
+  TAXpercentage = 23
+
+    # TAX included in database prices?
+  TAXincluded = 1
+    # Price decimals
+  priceDec = 2
+    # TAX included for EU countries?  
+  TAXeu = 1   
+
+    # cat=plugin.products//; type=small; label=Price decimal point
+  priceDecPoint = .
+    # cat=plugin.products//; type=small; label=Price Thousand point
+  priceThousandPoint = 
+}
+
