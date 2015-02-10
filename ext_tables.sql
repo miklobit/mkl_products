@@ -30,6 +30,7 @@ CREATE TABLE tt_products (
   deleted tinyint(3) unsigned DEFAULT '0' NOT NULL,
   ordered int(10) unsigned DEFAULT '0' NOT NULL,
   fe_group int(11) DEFAULT '0' NOT NULL,
+  prd_config text NOT NULL,
   PRIMARY KEY (uid),
   KEY parent (pid)
 );

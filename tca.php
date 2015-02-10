@@ -241,16 +241,36 @@ $TCA["tt_products"] = Array (
 				"maxitems" => "1",
 				"minitems" => "0"
 			)
+		),
+		"prd_config" => Array (
+			"label" => "LLL:EXT:mkl_products/locallang_tca.php:tt_products.prd_config",
+			"config" => Array (
+				"type" => "text",
+				"cols" => "48",	
+				"rows" => "15",
+				"wizards" => Array(
+					"_PADDING" => 2,
+					"example" => Array(
+						"title" => "Questionnaire Wizard",
+						"type" => "script",
+						"notNewRecords" => 1,
+						"icon" => t3lib_extMgm::extRelPath("mkl_products")."product_wizard/wizard_icon.gif",
+						"script" => t3lib_extMgm::extRelPath("mkl_products")."product_wizard/index.php",
+					),
+				),				
+			)
 		)		
 	),
 	"types" => Array (	
-		"1" => Array("showitem" => "hidden;;;;1-1-1, title;;3;;3-3-3, itemnumber, category;;4 , price;;2, note;;;richtext[*]:rte_transform[mode=ts_css|imgpath=uploads/mkl_products/rte/], image;;;;4-4-4,datasheet")
+		"1" => Array("showitem" => "hidden;;;;1-1-1, title;;3;;3-3-3, itemnumber, category;;4 , price;;2, prd_config,note;;;richtext[*]:rte_transform[mode=ts_css|imgpath=uploads/mkl_products/rte/], image;;;;4-4-4,datasheet")
 	),
 	"palettes" => Array (
 		"1" => Array("showitem" => "starttime, endtime, fe_group"),
 		"2" => Array("showitem" => "price2, price2_qty, price_factor, weight, inStock, inStock_low, on_demand "),
 		"3" => Array("showitem" => "www"),
-		"4" => Array("showitem" => "unit_factor, unit")		
+		"4" => Array("showitem" => "unit_factor, unit"),
+		"5" => Array("showitem" => "prd_config")
+		
 	)
 );
 

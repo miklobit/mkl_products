@@ -48,7 +48,8 @@ $LOCAL_LANG = Array (
 		'tt_content.pi_flexform.display_mode.9' => 'Orders: tracking',		
 		'tt_content.pi_flexform.display_mode.10' => 'Currency: selector',	
 		'tt_content.pi_flexform.display_mode.11' => 'Product counter',	
-		'tt_content.pi_flexform.product_records' => 'Selected products',										
+		'tt_content.pi_flexform.product_records' => 'Selected products',
+		'tt_products.prd_config' => "Product configuration:",
 	),
 	'dk' => Array (
 		'tt_products' => 'Produkter',
@@ -160,7 +161,8 @@ $LOCAL_LANG = Array (
 		'tt_content.pi_flexform.display_mode.8' => 'Koszyk: informacja',
 		'tt_content.pi_flexform.display_mode.9' => 'Zamówienia: śledzenie',	
 		'tt_content.pi_flexform.display_mode.10' => 'Waluta: wybór',	
-		'tt_content.pi_flexform.display_mode.11' => 'Licznik produktów',							
+		'tt_content.pi_flexform.display_mode.11' => 'Licznik produktów',
+		'tt_products.prd_config' => "Konfiguracja produktu:",
 	),
 	'si' => Array (
 		'tt_products' => 'Izdelki',
